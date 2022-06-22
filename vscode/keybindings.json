@@ -1,0 +1,513 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "command": "workbench.action.toggleZenMode",
+    "key": "ctrl+k ctrl+z"
+  },
+  {
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "key": "shift+alt+="
+  },
+  {
+    "command": "editor.emmet.action.balanceIn",
+    "key": "ctrl+shift+up"
+  },
+  {
+    "command": "editor.emmet.action.balanceOut",
+    "key": "ctrl+shift+down"
+  },
+  {
+    "command": "-npm-script.test",
+    "key": "ctrl+r t",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "key": "ctrl+[",
+    "when": "explorerViewletFocus && explorerViewletVisible"
+  },
+  {
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "key": "ctrl+e",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "key": "ctrl+shift+e",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "command": "-workbench.view.explorer",
+    "key": "ctrl+shift+e",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "command": "-workbench.action.newWindow",
+    "key": "ctrl+shift+n"
+  },
+  {
+    "command": "peacock.changeColorToFavorite",
+    "key": "shift+alt+home"
+  },
+  {
+    "command": "gitlens.toggleLineBlame",
+    "key": "ctrl+q ctrl+e"
+  },
+  {
+    "command": "-notebook.centerActiveCell",
+    "key": "ctrl+l",
+    "when": "notebookEditorFocused"
+  },
+  {
+    "command": "expandLineSelection",
+    "key": "ctrl+l",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "-expandLineSelection",
+    "key": "ctrl+l",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+q ctrl+k"
+  },
+  {
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "key": "ctrl+k e",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "key": "ctrl+k e",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "command": "workbench.view.explorer",
+    "key": "alt+q"
+  },
+  {
+    "command": "extension.transferToSnippetStore",
+    "key": "ctrl+shift+alt+enter",
+    "when": "editorHasSelection"
+  },
+  {
+    "command": "-extension.transferToSnippetStore",
+    "key": "ctrl+shift+t",
+    "when": "editorHasSelection"
+  },
+  {
+    "command": "-saveAll",
+    "key": "ctrl+k s"
+  },
+  {
+    "command": "saveAll",
+    "key": "ctrl+k s"
+  },
+  {
+    "command": "editor.action.formatSelection",
+    "key": "alt alt",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "command": "editor.action.formatDocument",
+    "key": "ctrl ctrl",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "command": "-workbench.view.scm",
+    "key": "ctrl+shift+g g",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "command": "workbench.view.scm",
+    "key": "alt+g",
+    "when": "workbench.scm.active"
+  },
+  {
+    "command": "-workbench.view.scm",
+    "key": "ctrl+shift+g",
+    "when": "workbench.scm.active"
+  },
+  {
+    "command": "-workbench.action.quickOpen",
+    "key": "ctrl+p"
+  },
+  {
+    "command": "-workbench.action.showCommands",
+    "key": "ctrl+shift+p"
+  },
+  {
+    "command": "-editor.emmet.action.expandAbbreviation",
+    "key": "tab",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "command": "editor.emmet.action.expandAbbreviation",
+    "key": "alt+e"
+  },
+  {
+    "command": "-workbench.action.files.openFile",
+    "key": "ctrl+o"
+  },
+  {
+    "command": "-inline-parameters.toggle",
+    "key": "ctrl+k a"
+  },
+  {
+    "command": "-turboConsoleLog.deleteAllLogMessages",
+    "key": "shift+alt+d"
+  },
+  {
+    "command": "-workbench.action.reloadWindow",
+    "key": "ctrl+r",
+    "when": "isDevelopment"
+  },
+  {
+    "command": "-npm-script.showOutput",
+    "key": "ctrl+r l",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-npm-script.run",
+    "key": "ctrl+r shift+r",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-yarn-script.test",
+    "key": "ctrl+r t",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-yarn-script.terminate",
+    "key": "ctrl+r shift+x",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-yarn-script.runScript",
+    "key": "ctrl+r shift+r",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-yarn-script.runScriptLast",
+    "key": "ctrl+r r",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-npm-script.terminate-script",
+    "key": "ctrl+r shift+x",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "-npm-script.rerun-last-script",
+    "key": "ctrl+r r",
+    "when": "!terminalFocus"
+  },
+  {
+    "args": {
+      "by": "line",
+      "revealCursor": true, // set to true if you did want to move the cursor
+      "to": "down",
+      // false is the default
+      "value": 10
+    },
+    "command": "editorScroll",
+    "key": "alt+m", // whatever keybinding you like
+    "when": "editorFocus"
+  },
+  {
+    "args": {
+      "by": "line",
+      "revealCursor": true,
+      "to": "up",
+      "value": 10
+    },
+    "command": "editorScroll",
+    "key": "shift+alt+m", // whatever keybinding you like
+    "when": "editorFocus"
+  },
+  {
+    "command": "-gitProjectManager.openProjectNewWindow",
+    "key": "ctrl+alt+n"
+  },
+  {
+    "command": "-gitlens.gitCommands",
+    "key": "alt+/",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "command": "-gitlens.showQuickRepoStatus",
+    "key": "alt+s",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "command": "-gitlens.toggleFileBlame",
+    "key": "alt+b",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "args": {
+      "by": "line",
+      "revealCursor": true,
+      "to": "up",
+      "value": 4
+    },
+    "command": "editorScroll",
+    "key": "ctrl+up",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": {
+      "by": "line",
+      "revealCursor": true,
+      "to": "down",
+      "value": 4
+    },
+    "command": "editorScroll",
+    "key": "ctrl+down",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": {
+      "by": "line",
+      "to": "up",
+      "value": 1
+    },
+    "command": "cursorMove",
+    "key": "alt+o",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": {
+      "by": "line",
+      "to": "down",
+      "value": 1
+    },
+    "command": "cursorMove",
+    "key": "alt+i",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "workbench.action.findInFiles",
+    "key": "alt+z"
+  },
+  {
+    "command": "workbench.action.replaceInFiles",
+    "key": "alt+x"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "alt+`"
+  },
+  {
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+b"
+  },
+  {
+    "command": "workbench.action.terminal.kill",
+    "key": "ctrl+w",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "fileutils.removeFile",
+    "key": "ctrl+shift+delete"
+  },
+  {
+    "command": "fileutils.renameFile",
+    "key": "ctrl+shift+r"
+  },
+  {
+    "command": "editor.action.selectToBracket",
+    "key": "ctrl+b"
+  },
+  {
+    "command": "workbench.action.tasks.runTask",
+    "key": "f1"
+  },
+  {
+    "command": "editor.action.quickFix",
+    "key": "alt+enter",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "command": "gitlens.gitCommands",
+    "key": "alt+/",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "command": "-gitlens.gitCommands",
+    "key": "ctrl+shift+g /",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "command": "search.action.openNewEditor",
+    "key": "ctrl+shift+f",
+    "when": "editorFocus"
+  },
+  {
+    "command": "workbench.action.terminal.new",
+    "key": "ctrl+n",
+    "when": "terminalFocus"
+  },
+  // Traverse VSCode IntelliSense suggestions with vim keybindings.
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // Traverse VSCode quick open options with vim keybindings.
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  // Move to the previous/next editor.
+  {
+    "key": "alt+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.previousEditor"
+  },
+
+  // Move active editor left or right (useful for full-stack web dev).
+  {
+    "key": "ctrl+alt+j",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "left"
+    }
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "right"
+    }
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "f3",
+    "command": "settings.cycle.colorTheme"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.showCommands"
+    //"when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "settings.cycle.inlayHints"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "list.expand",
+    "when": "listFocus && !inputFocus"
+  },
+  //{
+  //  "key": "ctrl+l",
+  //  "command": "repl.action.acceptInput",
+  //  "when": "inDebugRepl && textInputFocus"
+  //},
+  {
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+
+  {
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "extension.advancedNewFile"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "-workbench.action.findInFiles"
+  },
+  {
+    "key": "tab",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !listFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && textInputFocus && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "tab",
+    "command": "-insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "explorer.openAndPassFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "shift+l",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  }
+]
