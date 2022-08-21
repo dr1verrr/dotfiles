@@ -3,56 +3,223 @@
     "dev": true,
     "dist": true,
     "node_modules": true,
-    "node_modules_electron": true
+    "node_modules_electron": false
   },
   "css.hover.references": false,
-  "editor.autoClosingDelete": "always",
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeLens": false,
   "editor.comments.insertSpace": false,
-  "editor.cursorBlinking": "blink",
   "editor.cursorSurroundingLines": 10,
-  "editor.cursorWidth": 0,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.fontFamily": "Iosevka SS14",
   "editor.fontLigatures": true,
   "editor.fontSize": 17,
+  "folderTemplates.fileTemplates": {
+    "TSReactFC": [
+      "import React from 'react'",
+      "interface <FTName>Props {",
+      "}",
+      "",
+      "function <FTName>(props: <FTName>Props) {",
+      "  return <div><FTName></div>",
+      "}",
+      "",
+      "export default <FTName>"
+    ],
+    "Indexfile": "import <FTName> from './<FTName>'\n\nexport default <FTName>;",
+    "ReduxReducer": [
+      "import { AnyAction } from 'redux'",
+      "",
+      "const initialState = {}",
+      "",
+      "type State = typeof initialState",
+      "",
+      "type Payload = {}",
+      "",
+      "type Action = AnyAction & {",
+      "  payload: Payload",
+      "}",
+      "",
+      "const <FTName>Reducer = (state: State = initialState, action: Action) => {",
+      "  switch (action.type) {",
+
+      "    default:",
+      "      return state",
+      "  }",
+      "}",
+      "export default <FTName>Reducer"
+    ]
+  },
+  "folderTemplates.structures": [
+    {
+      "name": "Typescript React Functional Component",
+      "omitParentDirectory": true,
+
+      "structure": [
+        {
+          "fileName": "<FTName>/<FTName>.tsx",
+          "template": "TSReactFC"
+        },
+        {
+          "fileName": "<FTName>/<FTName>.test.js"
+        },
+        {
+          "fileName": "<FTName>/index.ts",
+          "template": "Indexfile"
+        }
+      ]
+    },
+    {
+      "name": "Redux",
+      "customVariables": ["Extension"],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName>/<FTName>.actions.<Extension>"
+        },
+        {
+          "fileName": "<FTName>/<FTName>.reducers.<Extension>",
+          "template": "ReduxReducer"
+        },
+        {
+          "fileName": "<FTName>/<FTName>.types.<Extension>"
+        }
+      ]
+    }
+  ],
   "editor.fontWeight": "400",
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.timeout": 250,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["<C-e>"],
+      "commands": [
+        "editor.emmet.action.expandAbbreviation",
+        "extension.vim_escape",
+        "extension.vim_right",
+        "extension.vim_right"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    { "before": ["<leader>", "c"], "commands": ["workbench.action.closeActiveEditor"] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "f", "r"], "commands": ["fileutils.renameFile"] },
+    { "before": ["<leader>", "f", "d"], "commands": ["fileutils.removeFile"] },
+    { "before": ["<leader>", "f", "m"], "commands": ["fileutils.moveFile"] },
+    { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.showAllSymbols"] },
+    { "before": ["<leader>", "o"], "commands": ["workbench.action.gotoSymbol"] },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["extension.advancedNewFile"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    }
+  ],
+  "vim.highlightedyank.enable": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+    "<C-f>": false,
+    "<C-x>": false,
+    "<C-t>": false,
+    "<C-e>": true,
+    "<C-j>": true,
+    "<C-w>": true
+  },
+  "vim.easymotion": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.addMissingImports": true
   },
   "editor.formatOnType": true,
-  "editor.glyphMargin": false,
   "editor.guides.bracketPairs": true,
-  "editor.letterSpacing": 0,
   "editor.lightbulb.enabled": false,
-  "editor.lineHeight": 24,
   "editor.matchBrackets": "near",
   "editor.minimap.enabled": false,
+  "editor.rulers": [{ "column": 120 }],
   "editor.mouseWheelScrollSensitivity": 3,
-  "editor.quickSuggestions": {
-    "comments": "off",
-    "other": "on",
-    "strings": "off"
-  },
   "editor.parameterHints.enabled": false,
-  "editor.renderControlCharacters": false,
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": true
-  },
   "editor.stickyTabStops": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.showDeprecated": false,
-  "editor.suggest.showWords": false,
+  "editor.lineHeight": 24,
+  "editor.suggest.showWords": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": false,
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
-  "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
@@ -65,7 +232,7 @@
   "explorer.openEditors.visible": 0,
   "explorer.sortOrder": "type",
   "extensions.ignoreRecommendations": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "onWindowChange",
   "files.exclude": {
     "**/node_modules": true
   },
@@ -80,135 +247,6 @@
   "html.hover.references": false,
   "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.preferences.quoteStyle": "single",
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<space>", "w"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<space>", "n"],
-      "after": [],
-      "commands": [
-        {
-          "command": "extension.advancedNewFile",
-          "args": []
-        }
-      ]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    // Move cursor in insert mode
-    {
-      "before": ["<C-i>"],
-      "commands": ["editor.action.triggerSuggest"],
-      "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {
-      "before": ["<Esc>"],
-      "after": ["<Esc>"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "p"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": ["<leader>", "o", "g"],
-      "commands": ["workbench.action.showAllSymbols"]
-    },
-    {
-      "before": ["<leader>", "o", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
-      "before": ["<leader>", "o", "o"],
-      "commands": ["workbench.action.showEditorsInActiveGroup"]
-    },
-    //{
-    //  "before": ["<leader>", "o", "p"],
-    //  "commands": ["workbench.action.quickOpen"]
-    //},
-    {
-      "before": ["<leader>", "r", "e"],
-      "commands": ["editor.action.rename"]
-    },
-    {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.commentLine", "extension.vim_escape"]
-    },
-    //{
-    //  "before": ["<leader>", "t"],
-    //  "commands": ["workbench.action.toggleSidebarVisibility"]
-    //},
-    //{
-    //  "before": ["<leader>", "f"],
-    //  "commands": ["revealInExplorer"]
-    //},
-    {
-      "before": ["<leader>", "r", "f"],
-      "commands": ["fileutils.renameFile"]
-    },
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<leader>", "s"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
-      "silent": true
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
-    },
-    {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
-    },
-    {
-      "before": ["p"],
-      "after": ["p", "g", "v", "y"]
-    },
-    {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.commentLine", "extension.vim_escape"]
-    }
-  ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-f>": false,
-    "<C-w>": false,
-    "<C-n>": false,
-    "<C-v>": false,
-    "<C-e>": false
-  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.arrowParens": "avoid",
   "prettier.jsxSingleQuote": true,
@@ -216,7 +254,6 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
-  "reactSnippets.settings.prettierEnabled": true,
   "scss.hover.references": false,
   "search.exclude": {
     "**/package-lock.json": true,
@@ -225,14 +262,14 @@
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "Iosevka Term SS14",
+  "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.commandsToSkipShell": ["workbench.action.focusActiveEditorGroup"],
   "terminal.integrated.cursorWidth": 3,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontFamily": "Iosevka Term SS14",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 17,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.gpuAcceleration": "auto",
-  "terminal.integrated.letterSpacing": 0.25,
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
@@ -256,42 +293,153 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.validate.enable": true,
   "update.enableWindowsBackgroundUpdates": false,
-  "update.mode": "none",
+  "update.mode": "manual",
   "window.customMenuBarAltFocus": false,
-  "window.experimental.commandCenter": false,
   "window.enableMenuBarMnemonics": false,
-  "window.menuBarVisibility": "hidden",
   "window.openFilesInNewWindow": "off",
   "window.title": "${rootName}${separator}${activeEditorMedium}",
   "window.titleBarStyle": "custom",
   "workbench.editor.closeEmptyGroups": false,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.enableExperiments": false,
+  "editor.tokenColorCustomizations": {
+    "[Solarized Next]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "comment.block",
+            "comment.block.documentation",
+            "comment.line",
+            "constant",
+            "constant.character",
+            "constant.character.escape",
+            "constant.numeric",
+            "constant.numeric.integer",
+            "constant.numeric.float",
+            "constant.numeric.hex",
+            "constant.numeric.octal",
+            "constant.other",
+            "constant.regexp",
+            "constant.rgb-value",
+            "emphasis",
+            "entity",
+            "entity.name",
+            "entity.name.class",
+            "entity.name.function",
+            "entity.name.method",
+            "entity.name.section",
+            "entity.name.selector",
+            "entity.name.tag",
+            "entity.name.type",
+            "entity.other",
+            "entity.other.attribute-name",
+            "entity.other.inherited-class",
+            "invalid",
+            "invalid.deprecated",
+            "invalid.illegal",
+            "keyword",
+            "keyword.control",
+            "keyword.operator",
+            "keyword.operator.new",
+            "keyword.operator.assignment",
+            "keyword.operator.arithmetic",
+            "keyword.operator.logical",
+            "keyword.other",
+            "markup",
+            "markup.bold",
+            "markup.changed",
+            "markup.deleted",
+            "markup.heading",
+            "markup.inline.raw",
+            "markup.inserted",
+            "markup.italic",
+            "markup.list",
+            "markup.list.numbered",
+            "markup.list.unnumbered",
+            "markup.other",
+            "markup.quote",
+            "markup.raw",
+            "markup.underline",
+            "markup.underline.link",
+            "meta",
+            "meta.block",
+            "meta.cast",
+            "meta.class",
+            "meta.function",
+            "meta.function-call",
+            "meta.preprocessor",
+            "meta.return-type",
+            "meta.selector",
+            "meta.tag",
+            "meta.type.annotation",
+            "meta.type",
+            "punctuation.definition.string.begin",
+            "punctuation.definition.string.end",
+            "punctuation.separator",
+            "punctuation.separator.continuation",
+            "punctuation.terminator",
+            "storage",
+            "storage.modifier",
+            "storage.type",
+            "string",
+            "string.interpolated",
+            "string.other",
+            "string.quoted",
+            "string.quoted.double",
+            "string.quoted.other",
+            "string.quoted.single",
+            "string.quoted.triple",
+            "string.regexp",
+            "string.unquoted",
+            "strong",
+            "support",
+            "support.class",
+            "support.constant",
+            "support.function",
+            "support.other",
+            "support.type",
+            "support.type.property-name",
+            "support.variable",
+            "variable",
+            "variable.language",
+            "variable.name",
+            "variable.other",
+            "variable.other.readwrite",
+            "variable.parameter"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  },
   "workbench.preferredDarkColorTheme": "Default Dark+",
   "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.startupEditor": "welcomePage",
-  "workbench.tree.indent": 14,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 17,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.enabled": false,
   "turboConsoleLog.quote": "'",
-  "editor.inlayHints.enabled": "on",
   "settings.cycle": [
     {
-      "id": "colorTheme", // must be unique
+      "id": "colorTheme",
       "overrideWorkspaceSettings": false,
       "values": [
         {
-          "workbench.colorTheme": "Default Dark+"
+          "workbench.colorTheme": "Default Dark+",
+          "editor.fontWeight": "400"
         },
         {
+          "editor.fontWeight": "500",
           "workbench.colorTheme": "GitHub Light"
         }
       ]
     },
     {
-      "id": "inlayHints", // must be unique
+      "id": "inlayHints",
       "overrideWorkspaceSettings": false,
       "values": [
         {
@@ -303,15 +451,34 @@
       ]
     }
   ],
-  "editor.quickSuggestionsDelay": 250,
   "explorer.copyRelativePathSeparator": "/",
   "window.autoDetectColorScheme": true,
-  "breadcrumbs.filePath": "off",
-  "editor.lineNumbers": "relative",
   "files.autoSaveDelay": 0,
   "workbench.editor.enablePreview": false,
-  "editor.inlayHints.padding": true,
-  "editor.inlayHints.fontSize": 15,
   "editor.tabCompletion": "on",
-  "git.experimental.mergeEditor": true
+  "editor.inlayHints.padding": true,
+  "editor.glyphMargin": false,
+  "editor.renderControlCharacters": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "always",
+  "reactSnippets.settings.importReactOnTop": false,
+  "reactSnippets.settings.prettierEnabled": true,
+  "editor.quickSuggestionsDelay": 0,
+  "git.mergeEditor": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.smartRelativeLine": true,
+  "editor.lineNumbers": "relative",
+  "editor.inlayHints.enabled": "on",
+  "editor.smoothScrolling": true,
+  "editor.experimental.useCustomCodeActionMenu": true,
+  "workbench.iconTheme": "vscode-icons",
+  "git.postCommitCommand": "push",
+  "workbench.colorTheme": "GitHub Dark Dimmed"
 }
